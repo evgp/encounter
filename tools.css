@@ -1,0 +1,29 @@
+#counter h1 { color: #0f0; }
+#counter a,
+#counter b { color: #ff0; font-weight: normal; }
+
+.past { display: flex; flex-wrap: wrap; align-items: flex-start; background: #061c00; border: 1px solid #ff0; border-radius: 5px; padding: 20px 0 0 20px; margin: 15px 0; }
+.past .game { margin: 0 20px 20px 30px; position: relative; }
+.past .date { color: #ff0; }
+
+.past h2 { line-height: 1; margin: 0 0 10px; position: relative; }
+.past img { position: absolute; top: 50%; left: -35px; margin-top: -15px; }
+
+.calendar { display: flex; flex-wrap: wrap; align-items: flex-start; padding: 20px 0 0 20px; background: #061c00; border: 1px solid #ff0; border-radius: 5px; margin-bottom: 15px; }
+.calendar h2 { line-height: 1; color: #ff0; margin: 0 0 10px; }
+
+.calendar .month { margin: 0 20px 20px 0; }
+.calendar table { border-collapse: collapse; }
+.calendar td { padding: 0; min-width: 30px; height: 30px; text-align: center; vertical-align: middle; border: 1px solid #1F8700; background: #062400; }
+.calendar td:nth-last-child(-n+2) { color: #ff0; }
+.calendar td:empty { border: 0; background: none; }
+
+.calendar img { vertical-align: top; }
+.calendar a:nth-child(n+2) img { border-left: 1px solid #1F8700; }
+
+.share { padding: 20px 0; text-align: center; background: #061c00; border: 1px solid #ff0; border-radius: 5px; margin: 10px 0; }
+.share h2 { line-height: 1; color: #ff0; margin: 0 0 15px; }
+
+.ya-share2__badge { margin: 0 5px; border-radius: 5px !important; padding: 10px 20px; }
+.ya-share2__counter { padding: 0 !important; margin-left: 5px; }
+.ya-share2__counter:before { display: none; }
