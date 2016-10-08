@@ -1,2 +1,2 @@
 # Encounter
-ulan.en.cx
+Дизайн и виджеты для домена http://ulan.en.cx
