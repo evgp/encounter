@@ -1,10 +1,10 @@
 #DivTopDesign, header { height: 170px; }
 
 header { position: absolute; left: 0; width: 100%; background: url('images/panorama.jpg') #000; }
-header .logo { position: absolute; z-index: 2; top: 0; left: 0; display: block; width: 275px; height: 170px; background: 0 0 url('images/logo/year/logo.png'); }
+header .logo { position: absolute; z-index: 2; top: 0; left: 0; display: block; width: 275px; height: 170px; background: 0 25px url('images/logo/evolution/logo.png'); }
 
-header .stars { position: absolute; top: 40px; left: 65px; width: 0; height: 20px; background: url('images/logo/year/stars.png'); overflow: visible !important; }
-header .stars:before { content: ''; display: block; position: absolute; width: 140px; height: 20px; background: url('images/logo/year/stars.png'); opacity: .25; }
+header .stars { position: absolute; top: 30px; left: 35px; width: 0; height: 50px; background: url('images/logo/evolution/stars.png'); overflow: visible !important; }
+header .stars:before { content: ''; display: block; position: absolute; width: 210px; height: 50px; background: url('images/logo/evolution/stars.png'); opacity: .25; }
 
 #tdContentRight { background: #062400; }
 #DivRightDesign { width: 210px; padding: 15px; }
