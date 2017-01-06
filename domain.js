@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	var stars = $('img[src*=en_logo]:eq(0)').attr('src').match(/en_logo(\d+)/)[1];
-	$('header .stars').animate({width: (stars * 20) + 'px'}, 2500);
+	$('header .stars').animate({width: (stars * 30) + 'px'}, 2500);
 
 	$('header').mousemove(function(e){
 		$(this).css({backgroundPosition: e.pageX * 100 / $('header').width() + '% 0'});
