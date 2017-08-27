@@ -15,7 +15,7 @@ $(document).ready(function(){
 			$(this).closest('table').after('<div class="share">' +
 				'<h2>Расскажи друзьям!</h2>' +
 
-				'<div class="ya-share2" data-services="vkontakte,facebook,twitter" data-url="http://' + domain + '.en.cx' + $(this).attr('href') + '" data-title="' + $(this).text() + '" data-image="http://cdn.endata.cx/images/v2/en/promo/encounter.png" data-counter></div>' +
+				'<div class="ya-share2" data-services="vkontakte" data-url="http://' + domain + '.en.cx' + $(this).attr('href') + '" data-title="' + $(this).text() + '" data-image="http://cdn.endata.cx/images/v2/en/promo/encounter.png" data-counter></div>' +
 			'</div>');
 		});
 	});
