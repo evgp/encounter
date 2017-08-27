@@ -9,6 +9,7 @@ $(document).ready(function(){
 		$('.boxGameInfo:first').before(data);
 	});
 
+	$.getScript('https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js');
 	$.getScript('https://yastatic.net/share2/share.js', function(){
 		$('a#lnkGameTitle').each(function(){
 			$(this).closest('table').after('<div class="share">' +
