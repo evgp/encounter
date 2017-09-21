@@ -10,12 +10,30 @@ $(document).ready(function(){
 	});
 
 	$.getScript('//yastatic.net/share2/share.js', function(){
+		var i = 0;
+		
 		$('a#lnkGameTitle').each(function(){
+			var link = $(this);
+			
 			$(this).closest('table').after('<div class="share">' +
 				'<h2>Расскажи друзьям!</h2>' +
 
-				'<div class="ya-share2" data-services="vkontakte,facebook,twitter,viber,whatsapp,telegram" data-url="http://' + domain + '.en.cx' + $(this).attr('href') + '" data-title="' + $(this).text() + '" data-image="http://cdn.endata.cx/images/v2/en/promo/encounter.png"></div>' +
-			'</div>');
+				'<div id="share-' + i + '" class="share"></div>'
+			);
+			
+			Ya.share2('share-' + i, {
+				content: {
+					url: 'http://' + domain + '.en.cx' + link.attr('href'),
+					title: link.text(),
+					image: 'http://cdn.endata.cx/images/v2/en/promo/encounter.png'   
+				},
+				
+				theme: {
+					services: 'vkontakte,facebook,twitter,viber,whatsapp,telegram'				
+				}
+			});
+			
+			i++;
 		});
 	});
 });
