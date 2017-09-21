@@ -18,7 +18,7 @@ $(document).ready(function(){
 			$(this).closest('table').after('<div class="share">' +
 				'<h2>Расскажи друзьям!</h2>' +
 
-				'<div id="share-' + i + '" class="share"></div>'
+				'<div id="share-' + i + '"></div>'
 			);
 			
 			Ya.share2('share-' + i, {
