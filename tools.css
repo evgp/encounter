@@ -24,6 +24,6 @@
 .share { padding: 20px 0; text-align: center; background: #061c00; border: 1px solid #ff0; border-radius: 5px; margin: 10px 0; }
 .share h2 { line-height: 1; color: #ff0; margin: 0 0 15px; }
 
-.ya-share2__badge { margin: 0 5px; border-radius: 5px !important; padding: 10px 20px; }
+.ya-share2__badge { margin: 0 5px; border-radius: 5px !important; padding: 10px; }
 .ya-share2__counter { padding: 0 !important; margin-left: 5px; }
 .ya-share2__counter:before { display: none; }
