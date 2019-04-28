@@ -50,5 +50,5 @@ $(document).ready(function(){
 	var phone = $('#EnTabContainer1_content_ctl00_panelLineContacts_contactsBlock_lblMobilePhoneVal');
 	phone.wrapInner('<a href="tel:' + phone.text() + '"></a>');
 
-	$.getScript('//creadome.tmweb.ru/encounter/statistics.php';
+	$.getScript('//creadome.tmweb.ru/encounter/statistics.php');
 });
