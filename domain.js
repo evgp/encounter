@@ -13,11 +13,17 @@ $(document).ready(function(){
 
 	$('tr.forumRow').has('a[href="/Guestbook.aspx?section=8077"]').addClass('siberia');
 
-	var user = $('a[href="/UserDetails.aspx"]:first'),
-		username = user.text();
+	var userLink = $('a[href="/UserDetails.aspx"]:first'),
+		userName = userLink.text();
 
-	if (username) { $('#DivBottomDesign').append('<div class="hare">Какие планы на вечер,<br>' + username + '?</div>'); }
-	else { username = 'этот человек'; }
+	if (userName) {
+		$('#DivBottomDesign').append('<div class="hare">Какие планы на вечер,<br>' + userName + '?</div>');
+
+		var date = new Date();
+		date.setTime(date.getTime() + (5 * 60 * 1000));
+
+		document.cookie = 'user=' + userLink.next('span').text() + '; expires=' + date.toGMTString() + '; path=/';        
+	} else userName = 'этот человек';
 
 	var tags = document.getElementsByTagName('*');
 
@@ -25,7 +31,7 @@ $(document).ready(function(){
 		if (tags[i].tagName != 'script') {
 			for (j = 0, s_ = tags[i].childNodes.length; j < s_; j++) {
 				if (tags[i].childNodes[j].nodeType == 3) {
-					tags[i].childNodes[j].textContent = tags[i].childNodes[j].textContent.replace(/%username%/g, username);
+					tags[i].childNodes[j].textContent = tags[i].childNodes[j].textContent.replace(/%username%/g, userName);
 				}
 			}
 		}
@@ -44,5 +50,5 @@ $(document).ready(function(){
 	var phone = $('#EnTabContainer1_content_ctl00_panelLineContacts_contactsBlock_lblMobilePhoneVal');
 	phone.wrapInner('<a href="tel:' + phone.text() + '"></a>');
 
-	$.getScript('//creadome.tmweb.ru/encounter/statistics.php?user=' + user.next('span').text());
+	$.getScript('//creadome.tmweb.ru/encounter/statistics.php';
 });
