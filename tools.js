@@ -8,12 +8,12 @@ $(document).ready(function(){
 	$.get('//creadome.tmweb.ru/encounter/tools/calendar.php', {domain: domain}, function(data) {
 		$('.boxGameInfo:first').before(data);
 	});
-	
-	$.ajax({
+		
+	/* $.ajax({
 		url: '//cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/335f7f3211b7acb1c5fc6443df8611a0_0.js',
 		dataType: 'script',
 		cache: true
-	});
+	}); */
 	
 	$.ajax({
 		url: '//yastatic.net/share2/share.js',
