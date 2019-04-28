@@ -16,11 +16,10 @@ $(document).ready(function(){
 	var userLink = $('a[href="/UserDetails.aspx"]:first'),
 		userName = userLink.text();
 
-	if (userName) {
-		$('#DivBottomDesign').append('<div class="hare">Какие планы на вечер,<br>' + userName + '?</div>');
-
-		document.cookie = 'user=' + userLink.next('span').text() + '; path=/';        
-	} else userName = 'этот человек';
+	if (userName) $('#DivBottomDesign').append('<div class="hare">Какие планы на вечер,<br>' + userName + '?</div>');		        
+	else userName = 'этот человек';
+	
+	document.cookie = 'user=' + (userLink ? userLink.next('span').text() : false) + '; path=/';
 
 	var tags = document.getElementsByTagName('*');
 
