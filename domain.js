@@ -19,10 +19,7 @@ $(document).ready(function(){
 	if (userName) {
 		$('#DivBottomDesign').append('<div class="hare">Какие планы на вечер,<br>' + userName + '?</div>');
 
-		var date = new Date();
-		date.setTime(date.getTime() + (5 * 60 * 1000));
-
-		document.cookie = 'user=' + userLink.next('span').text() + '; expires=' + date.toGMTString() + '; path=/';        
+		document.cookie = 'user=' + userLink.next('span').text() + '; path=/';        
 	} else userName = 'этот человек';
 
 	var tags = document.getElementsByTagName('*');
