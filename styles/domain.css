@@ -11,7 +11,7 @@ header .stars:before { content: ''; display: block; position: absolute; width: 2
 
 #vk-group { border: 1px solid #0f0; border-radius: 5px; padding: 5px; margin-bottom: 15px; }
 
-.administration { border: 1px solid #9cff00; background: #181c00; border-radius: 5px; padding: 10px; margin-bottom: 15px; text-align: center; }
+.administration { border: 1px solid #9cff00; background: #181c00; border-radius: 5px; padding: 20px 10px; margin-bottom: 15px; text-align: center; }
 
 .danger { border: 1px solid #0f0; border-radius: 5px; padding: 10px 0; margin-bottom: 15px; }
 .danger a { display: block; width: 195px; height: 240px; margin: 0 auto; background: url('../images/danger.gif'); }
