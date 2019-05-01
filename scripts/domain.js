@@ -7,8 +7,7 @@ $(document).ready(function(){
 		$(this).css({backgroundPosition: e.pageX * 100 / $('header').width() + '% 0'});
 	});
 
-	$('#tdContentLeft, #tdContentRight').wrapInner('<div class="js-stick"></div>');
-	// $('.js-stick').stick_in_parent();
+	$('#tdContentLeft, #tdContentRight').wrapInner('<div class="sticky"></div>');
 
 	var userLink = $('a[href="/UserDetails.aspx"]:first'),
 		userName = userLink.text();
