@@ -26,3 +26,5 @@ header .stars:before { content: ''; display: block; position: absolute; width: 2
 .siberia td span.green { color: #c00; }
 
 .divDescr img { max-width: 100%; height: auto !important; }
+
+.js-stick { position: sticky; }
