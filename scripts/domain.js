@@ -8,10 +8,7 @@ $(document).ready(function(){
 	});
 
 	$('#tdContentLeft, #tdContentRight').wrapInner('<div class="js-stick"></div>');
-
-	$('.js-stick').each(function() {
-		$(this).stick_in_parent();
-	});
+	// $('.js-stick').stick_in_parent();
 
 	var userLink = $('a[href="/UserDetails.aspx"]:first'),
 		userName = userLink.text();
