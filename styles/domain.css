@@ -14,24 +14,6 @@ header .stars:before { content: ''; display: block; position: absolute; width: 2
 .danger { border: 1px solid #0f0; border-radius: 5px; padding: 10px 0; margin-bottom: 15px; }
 .danger a { display: block; width: 195px; height: 240px; margin: 0 auto; background: url('images/danger.gif'); }
 
-.accordion,
-.administration { background: #061c00; padding: 10px; margin-bottom: 15px; border: 1px solid #ff0; border-radius: 5px; }
-
-.accordion { padding-bottom: 0; }
-.accordion h3 { font-size: 12px; padding: 5px; margin: 0 0 10px; cursor: pointer; background: url('http://d1.endata.cx/images/green_lines.gif') top left; text-align: center; }
-.accordion h3 span { color: #ff0; border-bottom: 1px dashed #ff0; }
-
-.accordion ul { width: 188px; padding: 0; margin: -5px 0 10px; list-style: none; display: none; }
-.accordion li { padding: 5px 0; border-bottom: 1px solid #0d3b00; }
-.accordion a { text-decoration: none; }
-
-.accordion h3.active span { color: #fff; border: 0; }
-
-.administration h3 { font-size: 12px; margin: 0; }
-.administration ul { padding: 0; margin: 0; list-style: none; }
-.administration li { border-top: 1px solid #0d3b00; margin-top: 10px; padding-top: 10px; }
-.administration div { margin-top: 10px; font-size: 11px; }
-
 #DivBottomDesign { background: url('http://d1.endata.cx/images/en016.gif') top left; text-align: center; padding: 20px 240px 20px 0; position: relative; }
 #DivBottomDesign:after { content: ''; display: inline-block; width: 140px; height: 155px; background: url('images/hare.png'); }
 

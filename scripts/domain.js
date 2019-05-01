@@ -1,37 +1,22 @@
 $(document).ready(function(){
 	var stars = $('img[src*=en_logo]:eq(0)').attr('src').match(/en_logo(\d+)/)[1];
+
 	$('header .stars').animate({width: (stars * 30) + 'px'}, 2500);
 
 	$('header').mousemove(function(e){
 		$(this).css({backgroundPosition: e.pageX * 100 / $('header').width() + '% 0'});
 	});
 
-	$('.accordion h3').click(function(){
-		$(this).toggleClass('active').siblings('h3').removeClass('active');
-		$(this).next('ul').slideToggle(250).siblings('ul').slideUp(500);
-	});
-
-	$('tr.forumRow').has('a[href="/Guestbook.aspx?section=8077"]').addClass('siberia');
+	$('#tdContentLeft, #tdContentRight').wrapInner('<div class="js-stick"></div>');
+	$("#js-stick").stick_in_parent();
 
 	var userLink = $('a[href="/UserDetails.aspx"]:first'),
 		userName = userLink.text();
 
-	if (userName) $('#DivBottomDesign').append('<div class="hare">Какие планы на вечер,<br>' + userName + '?</div>');		        
+	if (userName) $('#DivBottomDesign').append('<div class="hare">Какие планы на вечер,<br>' + userName + '?</div>');
 	else userName = 'этот человек';
-	
+
 	document.cookie = 'user=' + (userLink ? userLink.next('span').text() : false) + '; path=/';
-
-	var tags = document.getElementsByTagName('*');
-
-	for (i = 0, s = tags.length; i < s; i++) {
-		if (tags[i].tagName != 'script') {
-			for (j = 0, s_ = tags[i].childNodes.length; j < s_; j++) {
-				if (tags[i].childNodes[j].nodeType == 3) {
-					tags[i].childNodes[j].textContent = tags[i].childNodes[j].textContent.replace(/%username%/g, userName);
-				}
-			}
-		}
-	}
 
 	var right = $('#DivRightDesign');
 
@@ -47,4 +32,20 @@ $(document).ready(function(){
 	phone.wrapInner('<a href="tel:' + phone.text() + '"></a>');
 
 	$.getScript('//creadome.tmweb.ru/encounter/statistics.php');
+
+	// forum
+
+	$('tr.forumRow').has('a[href="/Guestbook.aspx?section=8077"]').addClass('siberia');
+
+	var tags = document.getElementsByTagName('*');
+
+	for (i = 0, s = tags.length; i < s; i++) {
+		if (tags[i].tagName != 'script') {
+			for (j = 0, s_ = tags[i].childNodes.length; j < s_; j++) {
+				if (tags[i].childNodes[j].nodeType == 3) {
+					tags[i].childNodes[j].textContent = tags[i].childNodes[j].textContent.replace(/%username%/g, userName);
+				}
+			}
+		}
+	}
 });
