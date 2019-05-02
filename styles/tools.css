@@ -9,10 +9,11 @@
 .past h2 { line-height: 1; margin: 0 0 10px; position: relative; }
 .past img { position: absolute; top: 50%; left: -35px; margin-top: -15px; }
 
-.calendar { display: flex; flex-wrap: wrap; align-items: flex-start; padding: 20px 0 0 20px; background: #061c00; border: 1px solid #ff0; border-radius: 5px; margin-bottom: 15px; }
-.calendar h2 { line-height: 1; color: #ff0; margin: 0 0 10px; }
+.calendar { margin: 15px 0; }
+.calendar h1 { margin-bottom: 15px; }
+.calendar h2 { line-height: 1; color: #ff0; margin: 0 0 15px; }
 
-.calendar .month { margin: 0 20px 20px 0; }
+.calendar .month { margin-bottom: 15px; }
 .calendar table { border-collapse: collapse; }
 .calendar td { padding: 0; min-width: 30px; height: 30px; text-align: center; vertical-align: middle; border: 1px solid #1F8700; background: #062400; }
 .calendar td:nth-last-child(-n+2) { color: #ff0; }
