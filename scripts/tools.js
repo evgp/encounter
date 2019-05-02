@@ -6,7 +6,7 @@ $(document).ready(function(){
 	});
 
 	$.get('//creadome.tmweb.ru/encounter/tools/calendar.php', {domain: domain}, function(data) {
-		$('.boxGameInfo:first').before(data);
+		$('#boxUser').append(data);
 	});
 
 	$.ajax({
