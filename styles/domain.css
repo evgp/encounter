@@ -10,6 +10,7 @@ header .stars:before { content: ''; display: block; position: absolute; width: 2
 #boxMovie ~ *,
 #boxCenterIntro { display: none; }
 
+#tdContentLeft { width: 210px; }
 #tdContentRight { background: #062400; }
 #DivRightDesign { width: 210px; padding: 15px; }
 
