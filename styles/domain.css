@@ -33,3 +33,5 @@ header .stars:before { content: ''; display: block; position: absolute; width: 2
 .siberia td { background: #330200; color: #c00; }
 .siberia td a { color: #f00; }
 .siberia td span.green { color: #c00; }
+
+.divDescr img { max-width: 100%; height: auto !important; }
