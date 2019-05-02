@@ -7,7 +7,33 @@ $(document).ready(function(){
 		$(this).css({backgroundPosition: e.pageX * 100 / $('header').width() + '% 0'});
 	});
 
-	$('#tdContentLeft, #tdContentRight').wrapInner('<div class="sticky"></div>');
+	$('#tdContentLeft, #tdContentRight').wrapInner('<div class="js-sticky"></div>');
+
+	var sticky = $('.js-sticky'),
+		before = 0;
+
+	$(window).on('scroll resize', function() {
+		var top = sticky.offset().top,
+			height = sticky.outerHeight(),
+
+			scroll = $(window).scrollTop(),
+			viewport = $(window).height();
+
+		if (height > viewport) {
+			if (before > scroll) {
+				if (scroll <= top) sticky.attr('style', 'position: fixed;');
+				else sticky.attr('style', 'top:' + top + 'px;');
+			} else {
+				if (top + height > scroll + viewport) sticky.attr('style', 'top:' + top + 'px;');
+				else sticky.attr('style', 'position: fixed; bottom: 0;');
+			}
+		} else {
+			sticky.attr('style', 'position: fixed;');
+		}
+
+		before = scroll;
+	}).scroll();
+
 
 	var userLink = $('a[href="/UserDetails.aspx"]:first'),
 		userName = userLink.text();
