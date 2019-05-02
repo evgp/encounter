@@ -10,12 +10,13 @@ $(document).ready(function(){
 	$('#tdContentLeft, #tdContentRight').wrapInner('<div class="js-sticky"></div>');
 
 	var userLink = $('a[href="/UserDetails.aspx"]:first'),
-		userName = userLink.text();
+		userName = userLink.text(),
+		userID = userLink.next('span').text();
+
+	console.log(userID);
 
 	if (userName) $('#DivBottomDesign').append('<div class="hare">Какие планы на вечер,<br>' + userName + '?</div>');
 	else userName = 'этот человек';
-
-	document.cookie = 'user=' + (userLink ? userLink.next('span').text() : false) + '; path=/';
 
 	var right = $('#DivRightDesign');
 
