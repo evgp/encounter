@@ -12,7 +12,7 @@ $(document).ready(function(){
 	var sticky = $('.js-sticky'),
 		before = 0;
 
-	$(window).on('scroll resize', function() {
+	$(window).live('scroll resize', function() {
 		var top = sticky.offset().top,
 			height = sticky.outerHeight(),
 
@@ -33,7 +33,6 @@ $(document).ready(function(){
 
 		before = scroll;
 	}).scroll();
-
 
 	var userLink = $('a[href="/UserDetails.aspx"]:first'),
 		userName = userLink.text();
