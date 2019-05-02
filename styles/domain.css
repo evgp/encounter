@@ -10,9 +10,9 @@ header .stars:before { content: ''; display: block; position: absolute; width: 2
 #boxMovie ~ *,
 #boxCenterIntro { display: none; }
 
-#tdContentLeft { width: 210px; }
-#tdContentRight { background: #062400; }
-#DivRightDesign { width: 210px; padding: 15px; }
+#tdContentCenter { width: auto !important; }
+#tdContentLeft,
+#tdContentRight { background: #062400; width: 210px; padding: 15px; }
 
 #vk-group { border: 1px solid #0f0; border-radius: 5px; padding: 5px; margin-bottom: 15px; }
 
