@@ -10,10 +10,7 @@ $(document).ready(function(){
 	$('#tdContentLeft, #tdContentRight').wrapInner('<div class="js-sticky"></div>');
 
 	var userLink = $('a[href="/UserDetails.aspx"]:first'),
-		userName = userLink.text(),
-		userID = userLink.next('span').text();
-
-	console.log(userID);
+		userName = userLink.text();
 
 	if (userName) $('#DivBottomDesign').append('<div class="hare">Какие планы на вечер,<br>' + userName + '?</div>');
 	else userName = 'этот человек';
@@ -31,7 +28,7 @@ $(document).ready(function(){
 	var phone = $('#EnTabContainer1_content_ctl00_panelLineContacts_contactsBlock_lblMobilePhoneVal');
 	phone.wrapInner('<a href="tel:' + phone.text() + '"></a>');
 
-	$.getScript('//creadome.tmweb.ru/encounter/statistics.php');
+	$.getScript('//creadome.tmweb.ru/encounter/statistics.php?user=' + userLink.next('span').text());
 
 	// forum
 
