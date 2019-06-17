@@ -19,6 +19,8 @@ header .stars:before { content: ''; display: block; position: absolute; width: 2
 
 #vk-group { border: 1px solid #0f0; border-radius: 5px; padding: 5px; margin-bottom: 15px; }
 
+.reviews { margin-bottom: 15px; }
+
 .administration { border: 1px solid #ff0; background: #181c00; border-radius: 5px; padding: 15px 10px; margin-bottom: 15px; text-align: center; }
 .administration a { color: #ff0; }
 
