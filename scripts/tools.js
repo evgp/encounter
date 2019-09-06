@@ -1,11 +1,11 @@
 $(document).ready(function(){
 	var domain = window.location.hostname.split('.').reverse()[2];
 
-	$.get('//creadome.tmweb.ru/encounter/tools/past.php', {domain: domain}, function(data) {
+	$.get('//en.creado.me/tools/past.php', {domain: domain}, function(data) {
 		$('#boxCenterComingGames').prepend(data);
 	});
 
-	$.get('//creadome.tmweb.ru/encounter/tools/calendar.php', {domain: domain}, function(data) {
+	$.get('//en.creado.me/tools/calendar.php', {domain: domain}, function(data) {
 		$('#boxUser').append(data);
 	});
 

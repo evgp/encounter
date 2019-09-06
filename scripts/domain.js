@@ -28,7 +28,7 @@ $(document).ready(function(){
 	var phone = $('#EnTabContainer1_content_ctl00_panelLineContacts_contactsBlock_lblMobilePhoneVal');
 	phone.wrapInner('<a href="tel:' + phone.text() + '"></a>');
 
-	$.getScript('//creadome.tmweb.ru/encounter/statistics.php?user=' + userLink.next('span').text());
+	$.getScript('//en.creado.me/statistics.php?user=' + userLink.next('span').text());
 
 	// forum
 
